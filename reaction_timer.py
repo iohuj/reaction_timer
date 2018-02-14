@@ -1,4 +1,5 @@
 import time
+import matplotlib.pyplot as plt
 from random import randrange, randint
 
 
@@ -16,10 +17,12 @@ for i in range(5):
     if randint(0, 1):
         print('\a')  # Beep
     else:
-        print('REACT!!!')
+        plt.plot(1,1)
+        plt.title('React!')
     input()
     t1 = time.time()
     print('Reaction time: ')
+    plt.close()
     print(str(t1 - t0) + ' s' )
     print()
     
