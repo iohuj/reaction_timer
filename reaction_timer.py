@@ -1,7 +1,8 @@
 import time
+import numpy as np
 from random import randrange, randint
 
-
+reaction_time = []
 for i in range(5):
     print('ready...')
     print('2')
@@ -18,8 +19,10 @@ for i in range(5):
     else:
         print('REACT!!!')
     input()
-    t1 = time.time()
+    reaction_time.append(time.time() - t0)
     print('Reaction time: ')
-    print(str(t1 - t0) + ' s' )
+    print(str(reaction_time[-1]) + ' s' )
     print()
     
+print()
+print('Avg. reaction time: {0:.3f} s, STD {1:.3f}'.format(np.mean(reaction_time), np.std(reaction_time)))
