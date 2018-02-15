@@ -1,6 +1,7 @@
 import time
 import matplotlib.pyplot as plt
 from random import randrange, randint
+from termcolor import colored
 
 
 for i in range(5):
@@ -17,8 +18,7 @@ for i in range(5):
     if randint(0, 1):
         print('\a')  # Beep
     else:
-        plt.plot(1,1)
-        plt.title('React!')
+        print('*****' +  colored(' REACT!!! ','green') + '*****')
     input()
     t1 = time.time()
     print('Reaction time: ')
